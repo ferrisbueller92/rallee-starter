@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rallee Starter — your new way of working</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white: #fffcf9;
+  --black: #070707;
+  --red: #ea0000;
+  --grey: #dddddd;
+  --light-grey: #f6f2f2;
+  --ink-soft: #3D3D3D;
+  --muted: #7A7A7A;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.55;
+  font-size: 16px;
+}
+.container { max-width: 880px; margin: 0 auto; padding: 64px 32px 96px; }
+
+/* WORDMARK */
+.wordmark {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  margin-bottom: 56px;
+}
+.wordmark .dot { color: var(--red); }
+
+/* HERO */
+.hero { margin-bottom: 56px; }
+.eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  max-width: 680px;
+}
+h1 em {
+  font-style: italic;
+  color: var(--red);
+  font-weight: 400;
+}
+.sub {
+  font-size: 19px;
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+/* SECTION HEADERS — sentence case, no all caps per L02 brand rule */
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: -0.018em;
+  margin: 64px 0 16px;
+  max-width: 640px;
+}
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  margin: 28px 0 10px;
+}
+.section { margin-bottom: 32px; }
+.lede {
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+  font-size: 17px;
+  max-width: 640px;
+}
+
+p { margin-bottom: 14px; color: var(--ink-soft); max-width: 680px; }
+p strong { color: var(--black); }
+
+ul.list { padding-left: 22px; max-width: 680px; }
+ul.list li { padding: 4px 0; color: var(--ink-soft); }
+ul.list li strong { color: var(--black); }
+
+/* PROMPT BLOCK */
+.prompt {
+  background: var(--light-grey);
+  padding: 18px 22px;
+  margin: 14px 0;
+  border-left: 2px solid var(--red);
+  max-width: 680px;
+}
+.prompt .you {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.prompt .say {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.prompt .then {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.prompt .then strong { color: var(--black); }
+.prompt .skill {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  background: var(--white);
+  border: 1px solid var(--grey);
+  padding: 2px 8px;
+  margin: 0 2px;
+}
+
+/* SKILL TABLE */
+.skill-list {
+  border-top: 1px solid var(--grey);
+  margin-top: 20px;
+  max-width: 680px;
+}
+.skill-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--grey);
+  gap: 20px;
+}
+.skill-row .name {
+  font-family: 'Space Mono', monospace;
+  font-size: 13.5px;
+  color: var(--red);
+  font-weight: 700;
+}
+.skill-row .desc {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.skill-row .desc strong { color: var(--black); }
+
+/* RHYTHM */
+.rhythm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  max-width: 720px;
+  margin: 20px 0;
+}
+.rhy {
+  background: var(--light-grey);
+  padding: 20px 22px;
+}
+.rhy .time {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.rhy .what {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 8px;
+  letter-spacing: -0.005em;
+}
+.rhy .how { font-size: 14px; color: var(--ink-soft); }
+
+/* WARM CALLOUT */
+.warm {
+  background: var(--light-grey);
+  padding: 24px 28px;
+  margin: 28px 0;
+  max-width: 680px;
+}
+.warm .label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.warm p { margin: 0; color: var(--black); font-size: 16px; line-height: 1.55; }
+.warm p + p { margin-top: 10px; }
+
+code {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  background: var(--light-grey);
+  padding: 2px 6px;
+  color: var(--black);
+}
+
+.foot {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid var(--grey);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 720px) {
+  h1 { font-size: 42px; }
+  h2 { font-size: 30px; }
+  .rhythm { grid-template-columns: 1fr; }
+  .skill-row { grid-template-columns: 1fr; gap: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="wordmark">rallee<span class="dot">.</span></div>
+
+<div class="hero">
+  <div class="eyebrow">Your new way of working</div>
+  <h1>A more curated Claude, <em>tuned to Rallee.</em></h1>
+  <p class="sub">Claude that remembers you. Knows your brand. Catches your blind spots. Captures decisions so tomorrow opens further along than yesterday closed.</p>
+  <div class="meta">Built by Just Sorted · v0.1.1 · Updated 2026-05-12</div>
+</div>
+
+<!-- WHAT THIS IS -->
+<div class="section">
+  <h2>What this is</h2>
+  <p>You've been using Claude Chat. It's smart but it forgets. Every conversation starts at zero. You explain who you are, what Rallee does, your voice rules, what you've decided. Then the window closes and it's gone.</p>
+  <p>This workspace fixes that. It's a folder on your Mac that Claude Code reads every time you open it — your brand bible, your decisions, your patterns, your past notes. The same Claude you've been using, but tuned to your work and remembering it.</p>
+  <p>Eleven small skills, three quiet safety hooks, one search tool, and the full Rallee brand bible already token-ised so Claude knows the difference between a refined editorial post and a corporate-stiff one.</p>
+</div>
+
+<!-- THE FIVE -->
+<div class="section">
+  <h2>The five things you'll use most</h2>
+  <p class="lede">Start here. The other four skills are there when you need them.</p>
+
+  <div class="prompt">
+    <div class="you">You type</div>
+    <div class="say">"Need a square LinkedIn post about [topic]. Brief should hit my brand."</div>
+    <div class="then"><strong>What happens:</strong> <span class="skill">/design-brief</span> fires. It reads your brand bible (palette, fonts, voice principles), reads your voice rules, returns a Canva-ready brief — exact copy, hex codes, font specs, layout suggestion. Paste into Canva, apply your brand kit, post.</div>
+  </div>
+
+  <div class="prompt">
+    <div class="you">You type</div>
+    <div class="say">"Critique this: [paste a LinkedIn DM, a candidate email, a client proposal]"</div>
+    <div class="then"><strong>What happens:</strong> <span class="skill">/critique</span> fires. Scored 1 to 20. Verdict: Ship, Fix, or Kill. Specific edit suggestions for each problem. Harsh on purpose — that's the value.</div>
+  </div>
+
+  <div class="prompt">
+    <div class="you">You type</div>
+    <div class="say">"Research the boutique recruitment landscape in Sydney for Q2 2026 — what's moving, what's not."</div>
+    <div class="then"><strong>What happens:</strong> <span class="skill">/research-analyst</span> fires. Multi-source web research with citations, freshness flagged, structured output. No fabricated stats — sources or it didn't happen.</div>
+  </div>
+
+  <div class="prompt">
+    <div class="you">You type</div>
+    <div class="say">"What does my brand bible say about red usage?"</div>
+    <div class="then"><strong>What happens:</strong> <span class="skill">/brand-bible</span> fires. Quotes the exact rule from <code>resources/brand/rallee/visual-style.yaml</code> — red as accent only, never background, single moment per asset. Quotes hex codes verbatim.</div>
+  </div>
+
+  <div class="prompt">
+    <div class="you">You type at end of day</div>
+    <div class="say">"Session close. Capture what we decided today."</div>
+    <div class="then"><strong>What happens:</strong> <span class="skill">/session-close</span> fires. Asks you for the day's decisions, lessons, blockers. Writes them to memory. Tomorrow when you open the folder, Claude remembers — picks up where you left off.</div>
+  </div>
+</div>
+
+<!-- THE RHYTHM -->
+<div class="section">
+  <h2>The rhythm</h2>
+  <p class="lede">Three touchpoints a day. Each one is short. The discipline is what compounds.</p>
+
+  <div class="rhythm">
+    <div class="rhy">
+      <div class="time">Morning · 2 min</div>
+      <div class="what">Orient.</div>
+      <div class="how">Open the folder in Claude Code. The first message of the session loads SOUL, CLAUDE, USER, LESSONS, MEMORY automatically. Type: <em>"What did I leave open from yesterday?"</em> Claude shows you.</div>
+    </div>
+    <div class="rhy">
+      <div class="time">During · as needed</div>
+      <div class="what">Work the day.</div>
+      <div class="how">Pull whichever skill the task calls for. LinkedIn post → design brief. Outreach email → write + humanise + critique. New client research → research-analyst. Each is one prompt.</div>
+    </div>
+    <div class="rhy">
+      <div class="time">End of day · 3 min</div>
+      <div class="what">Capture.</div>
+      <div class="how">Type: <em>"Session close."</em> Claude prompts you for decisions, lessons, anything carrying into tomorrow. Five sentences max. The compounding is in the consistency.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FULL SKILL LIST -->
+<div class="section">
+  <h2>Your full toolkit</h2>
+  <p class="lede">All nine skills. Most you'll use occasionally. The five above you'll use weekly.</p>
+
+  <div class="skill-list">
+    <div class="skill-row">
+      <div class="name">/design-brief</div>
+      <div class="desc">Canva-ready briefs in your brand voice. Copy + hex + fonts + layout.</div>
+    </div>
+    <div class="skill-row">
+      <div class="name">/critique</div>
+      <div class="desc">Adversarial review on any draft. Scored 1–20. Ship, Fix, or Kill.</div>
+    </div>
+    <div class="skill-row">
+      <div class="name">/research-analyst</div>
+      <div class="desc">Deep market or candidate research. Multi-source. Citations required.</div>
+    </div>
+    <div class="skill-row">
+      <div class="name">/brand-bible</div>
+      <div class="desc">Look anything up in your brand bible — voice, palette, photography rules.</div>
+    </div>
+    <div class="skill-row">
+      <div class="name">/humanise-text</div>
+      <div class="desc">Strips AI-isms from any draft. Applies your voice profile automatically.</div>
+    </div>
+    <div class="skill-row">
+      <div class="name">/vault-search</div>
+      <div class="desc">Find anything you've written. Semantic search across your folder.</div>
+    </div>
+    <div class="skill-row">
+      <div class="name">/session-close</div>
+      <div class="desc">End-of-day capture. Writes decisions + lessons into memory.</div>
+    </div>
+    <div class="skill-row">
+      <div class="name">/whats-shipped</div>
+      <div class="desc">"What's in this repo?" — Claude reads the inventory and explains.</div>
+    </div>
+    <div class="skill-row">
+      <div class="name">/update</div>
+      <div class="desc">Pulls latest improvements from upstream. Walks you through what changed.</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT IT REMEMBERS -->
+<div class="section">
+  <h2>What Claude already knows about you</h2>
+  <p>Once Dave finishes setup with you, this is loaded automatically every session:</p>
+  <ul class="list">
+    <li><strong>Your USER.md</strong> — who you are, what Rallee does, how you prefer to work, what you don't want from AI</li>
+    <li><strong>Your brand bible</strong> — palette (Rallee Red #ea0000 sparingly, Rallee Black, warm white), typography (Futura H1, Inter Display body), voice (refined / intelligent / warm / Australian without colloquial), photography direction (editorial / lifestyle / red wardrobe features)</li>
+    <li><strong>Your lessons</strong> — ten hard-won rules about what to never do (e.g., never delete with <code>rm</code>, always visual-verify before saying "done")</li>
+    <li><strong>Your memory</strong> — every decision and lesson you capture via <code>/session-close</code> stays in <code>memory/</code> forever</li>
+  </ul>
+  <p>It does NOT touch your global Claude Code setup. This is a project folder. When you switch to a different folder, this workspace goes quiet.</p>
+</div>
+
+<!-- WHEN IT IMPROVES -->
+<div class="section">
+  <h2>How updates work</h2>
+  <p>Dave pushes improvements weekly — new skills, better instructions, refinements to existing tools. He'll Telegram you when there's something new worth pulling. When that happens, type:</p>
+  <div class="prompt">
+    <div class="you">You type</div>
+    <div class="say">"Pull latest. Walk me through what changed."</div>
+    <div class="then"><strong>What happens:</strong> <span class="skill">/update</span> fires. Runs <code>git pull origin main</code>, reads the new entries in CHANGELOG.md, explains each change in plain language. ~30 seconds.</div>
+  </div>
+  <p>You don't have to pull every change. Wait for Dave to flag the worthwhile ones.</p>
+</div>
+
+<!-- WHEN SOMETHING GOES WRONG -->
+<div class="warm">
+  <div class="label">When something feels off</div>
+  <p>Telegram Dave. Be specific — paste the exact prompt you used and what came back. Every weird response goes into our build log and the next person hits it less.</p>
+  <p>If you want to start a session over, just close and reopen the folder in Claude Code. No state to corrupt — the workspace is built to be re-openable. Your work is in <code>memory/</code> and lives separately from any session state.</p>
+</div>
+
+<!-- WHAT THIS IS NOT -->
+<div class="section">
+  <h2>What this is not</h2>
+  <ul class="list">
+    <li><strong>Not a replacement for your judgement.</strong> Claude drafts. You approve. Especially on anything client-facing.</li>
+    <li><strong>Not a content factory.</strong> One on-brand LinkedIn post a week is worth ten generic ones. The skills are for craft, not volume.</li>
+    <li><strong>Not your personal AI.</strong> When you open a different folder or visit claude.ai for personal stuff, this workspace doesn't follow you.</li>
+    <li><strong>Not finished.</strong> v0.1.1 is the foundation. More skills layer on as you tell Dave what you need.</li>
+  </ul>
+</div>
+
+<!-- COMING -->
+<div class="section">
+  <h2>What's coming</h2>
+  <p>Based on what you actually use in the first week, Dave layers in:</p>
+  <ul class="list">
+    <li>Email integration (Gmail draft + send through Claude — careful with the "send" part)</li>
+    <li>Calendar awareness (Claude knows your week, can draft outbound around availability)</li>
+    <li>Klaviyo for the hot-talent newsletter you've been meaning to ship</li>
+    <li>LinkedIn drafting workflows (with explicit "draft only, you send" guardrails)</li>
+    <li>A Rallee-specific carousel skill for recurring Instagram content</li>
+  </ul>
+  <p>You shape the roadmap. Tell Dave what you wish you had. The next sprint builds it.</p>
+</div>
+
+<div class="foot">
+  Rallee Starter v0.1.1 · Built by Just Sorted · For Bri Hardie · 2026-05-12
+</div>
+
+</div>
+</body>
+</html>

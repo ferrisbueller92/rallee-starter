@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rallee Starter — Mac Install Runbook (Dave's reference)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white: #fffcf9;
+  --black: #070707;
+  --red: #ea0000;
+  --grey: #dddddd;
+  --light-grey: #f6f2f2;
+  --ink-soft: #3D3D3D;
+  --muted: #7A7A7A;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.55;
+  font-size: 16px;
+}
+.container { max-width: 880px; margin: 0 auto; padding: 56px 32px 80px; }
+
+.hero { border-bottom: 1px solid var(--grey); padding-bottom: 32px; margin-bottom: 44px; }
+.eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+.sub {
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+.meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.meta strong { color: var(--black); }
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.015em;
+  margin: 44px 0 10px;
+}
+.section { margin-bottom: 36px; }
+.lede { color: var(--ink-soft); margin-bottom: 18px; font-size: 16px; max-width: 700px; }
+
+p { margin-bottom: 12px; color: var(--ink-soft); }
+p strong { color: var(--black); }
+
+/* CALLOUT */
+.callout {
+  background: var(--light-grey);
+  border-left: 3px solid var(--red);
+  padding: 18px 22px;
+  margin: 18px 0;
+}
+.callout .label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.callout p { margin: 0; color: var(--black); font-size: 15px; }
+.callout p + p { margin-top: 8px; }
+
+/* STEPS */
+.step {
+  border: 1px solid var(--grey);
+  padding: 22px 26px;
+  margin-bottom: 12px;
+  background: var(--white);
+}
+.step .head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+.step .num {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--red);
+  font-weight: 700;
+}
+.step .title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+.step .why {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 13.5px;
+  margin-bottom: 10px;
+}
+.step .body { font-size: 14.5px; color: var(--ink-soft); }
+.step .body p { margin-bottom: 8px; color: var(--ink-soft); }
+.step .body ul { padding-left: 22px; margin-bottom: 6px; }
+.step .body li { padding: 2px 0; font-size: 14px; }
+.step .body strong { color: var(--black); }
+
+pre {
+  background: var(--black);
+  color: var(--white);
+  padding: 14px 18px;
+  overflow-x: auto;
+  font-family: 'Space Mono', monospace;
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin: 8px 0;
+}
+pre code { color: var(--white); }
+code {
+  font-family: 'Space Mono', monospace;
+  font-size: 12.5px;
+  background: var(--light-grey);
+  padding: 2px 6px;
+  color: var(--black);
+}
+
+.expect {
+  background: var(--light-grey);
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 6px 0;
+  border-left: 2px solid var(--grey);
+}
+.expect strong { color: var(--black); }
+
+.help {
+  background: var(--light-grey);
+  border-left: 3px solid var(--black);
+  padding: 14px 20px;
+  margin: 14px 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.help strong { color: var(--black); }
+.help .label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 700;
+}
+
+.foot {
+  margin-top: 48px;
+  padding-top: 18px;
+  border-top: 1px solid var(--grey);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 720px) {
+  h1 { font-size: 38px; }
+  .step .head { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+  <div class="eyebrow">Internal · Dave's reference · Pre-Bri meeting</div>
+  <h1>Mac install runbook for Bri</h1>
+  <p class="sub">Step-by-step, top-to-bottom, ~25 minutes total on Bri's Mac. Every command verified, every common failure handled. If anything goes off-script, ask in chat — don't improvise.</p>
+  <div class="meta">
+    <span><strong>For:</strong> Dave (you, executing on Bri's machine)</span>
+    <span><strong>Target Mac:</strong> Apple Silicon or Intel, macOS 12+</span>
+    <span><strong>Estimated time:</strong> ~25 min</span>
+    <span><strong>Updated:</strong> 2026-05-12 AEST</span>
+  </div>
+</div>
+
+<!-- BEFORE YOU SIT DOWN -->
+<div class="section">
+  <h2>Before you sit down with her</h2>
+  <p>Confirm with Bri via Telegram:</p>
+  <ul style="padding-left: 22px; margin-bottom: 14px;">
+    <li>She has a GitHub account (any username) — needed for cloning</li>
+    <li>She has Claude Code installed (desktop app or VS Code extension)</li>
+    <li>Roughly 30 min uninterrupted</li>
+    <li>Her Mac unlocked, terminal-able</li>
+  </ul>
+  <p>Bring on a phone or laptop with you:</p>
+  <ul style="padding-left: 22px;">
+    <li>This runbook open (this page)</li>
+    <li>The Rallee starter repo URL: <code>github.com/ferrisbueller92/rallee-starter</code></li>
+    <li>Telegram (in case you need to ping me with a question)</li>
+  </ul>
+</div>
+
+<div class="callout">
+  <div class="label">The verify-first rule</div>
+  <p>For every install step: <strong>check the version first</strong>. Only install if the command returns "command not found". This avoids the install-failure rabbit hole that ate 20 minutes for SJ.</p>
+</div>
+
+<!-- STEPS -->
+
+<div class="step">
+  <div class="head"><span class="num">01</span><span class="title">Open Terminal</span></div>
+  <div class="why">Spotlight → "Terminal" → enter.</div>
+  <div class="body">
+    <p>Bri may have iTerm2 or Warp instead — any of them work. Native Terminal is fine.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">02</span><span class="title">Check what she already has</span></div>
+  <div class="why">Apple Silicon Macs with developer tools often have most of this. Verify first.</div>
+  <div class="body">
+    <p>Run all five in order. Each returns either a version number or "command not found".</p>
+<pre><code>git --version
+gh --version
+python3 --version
+brew --version
+trash --version</code></pre>
+    <div class="expect">
+      <strong>Expected on most Macs:</strong> git installed (often 2.39+, came with Xcode CLT). brew likely installed if she's developer-adjacent. gh, python3, trash less likely.
+    </div>
+    <p>Make a mental note of which returned a version and which said "command not found".</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">03</span><span class="title">Install Homebrew (only if Step 02 said "brew: command not found")</span></div>
+  <div class="why">Homebrew is the Mac package manager. Without it, the other installs need manual workarounds.</div>
+  <div class="body">
+<pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+    <p>This prompts for her Mac password (sudo) and takes ~3-5 min. After it finishes, the installer prints two lines to add brew to her PATH — <strong>run them exactly as shown</strong> (something like <code>echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' &gt;&gt; /Users/&lt;her&gt;/.zprofile</code> then the eval).</p>
+    <p>Verify:</p>
+<pre><code>brew --version</code></pre>
+    <div class="help">
+      <span class="label">If something goes wrong here</span>
+      Most common: Xcode Command Line Tools missing. Brew installer will offer to install them — accept, takes ~10 min. If brew install fails completely, ping me. Don't push through.
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">04</span><span class="title">Install the missing prereqs (only the ones Step 02 marked as missing)</span></div>
+  <div class="why">gh CLI for cloning, python3 for the vault search tool, trash for safe deletes (LESSONS L02).</div>
+  <div class="body">
+    <p>For each command that returned "not found" in Step 02, run the matching line. Skip the ones already installed.</p>
+<pre><code>brew install gh                # only if `gh --version` failed
+brew install python@3.12       # only if `python3 --version` failed
+brew install trash-cli         # only if `trash --version` failed</code></pre>
+    <p>Each takes 30-90 sec. Re-verify:</p>
+<pre><code>gh --version
+python3 --version
+trash --version</code></pre>
+    <div class="expect">
+      <strong>All three should report a version.</strong> If any still fail after install, that's unexpected — ping me before continuing.
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">05</span><span class="title">Sign Bri into GitHub via gh</span></div>
+  <div class="why">She'll be the one with permissions on her local copy of the repo.</div>
+  <div class="body">
+<pre><code>gh auth login</code></pre>
+    <p>Walk her through these answers:</p>
+    <ul>
+      <li>"What account?" → <strong>GitHub.com</strong></li>
+      <li>"Preferred protocol?" → <strong>HTTPS</strong></li>
+      <li>"Authenticate Git with your GitHub credentials?" → <strong>Yes</strong></li>
+      <li>"How would you like to authenticate?" → <strong>Login with a web browser</strong></li>
+    </ul>
+    <p>Copy the one-time code shown in terminal. Press Enter. Browser opens to GitHub. <strong>She</strong> pastes the code, signs in if not already, authorises. Back in terminal, it confirms login.</p>
+    <p>Verify:</p>
+<pre><code>gh auth status</code></pre>
+    <div class="expect">
+      Should show: <code>Logged in to github.com account &lt;her-github-username&gt;</code>.
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">06</span><span class="title">Clone the repo to her Documents</span></div>
+  <div class="why">Putting it in Documents keeps it findable. ~/projects works too if she prefers.</div>
+  <div class="body">
+<pre><code>cd ~/Documents
+gh repo clone ferrisbueller92/rallee-starter rallee-vault
+cd rallee-vault</code></pre>
+    <p>The folder is now at <code>~/Documents/rallee-vault</code>. ~25MB.</p>
+    <div class="expect">
+      Bri should be in the folder. <code>ls</code> shows README.md, SOUL.md, CLAUDE.md, .claude/, resources/, etc.
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">07</span><span class="title">Activate the config templates</span></div>
+  <div class="why">The repo ships .example versions. Both copies are gitignored — her secrets stay local.</div>
+  <div class="body">
+<pre><code>cp .claude/settings.example.json .claude/settings.json
+cp env.example .env</code></pre>
+    <p>That's it. The hooks now load when Claude Code opens the folder.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">08</span><span class="title">Install Python dependencies</span></div>
+  <div class="why">Powers the vault search tool. Skip if Bri doesn't want the semantic-search demo today — vault_search.py falls back to keyword grep without these deps.</div>
+  <div class="body">
+<pre><code>pip3 install -r requirements.txt</code></pre>
+    <p>Takes ~2-3 min. Downloads sentence-transformers (~80MB).</p>
+    <div class="help">
+      <span class="label">If pip fails with "externally-managed-environment"</span>
+      Common on newer macOS. Two options: (a) <code>pip3 install --user -r requirements.txt</code>, or (b) skip the install entirely — keyword fallback works fine for tomorrow. Don't burn time.
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">09</span><span class="title">Open the folder in Claude Code</span></div>
+  <div class="why">This is the moment everything comes alive.</div>
+  <div class="body">
+    <p>Launch Claude Code on her Mac. <strong>File → Open Folder → navigate to <code>~/Documents/rallee-vault</code></strong>. Confirm.</p>
+    <p>Claude Code loads <code>.claude/settings.json</code> automatically. Skills and hooks are now active <em>only inside this folder</em>. When she switches folders later, this workspace goes dormant.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">10</span><span class="title">Populate USER.md (have Bri introduce herself)</span></div>
+  <div class="why">Persistent memory of who she is, what she works on, how she likes to work.</div>
+  <div class="body">
+    <p>In Claude Code chat, have Bri type something like:</p>
+    <div class="expect">
+      <em>"I'm Bri Hardie, founder of Rallee — a boutique recruitment and team-building agency in Sydney. I place senior talent into premium-positioned Aussie SMBs and scale-ups, and I help companies rally their teams around culture. I prefer direct, refined communication — no corporate buzzwords, no emojis in client comms, Australian register without 'mate'. My voice principle: 'we vet every candidate', 'we rally the talent — and the team'."</em>
+    </div>
+    <p>Then: <em>"Save this to my USER.md and remember it for every future session."</em></p>
+    <p>Claude reads SOUL/CLAUDE/USER on every session start (the session-state hook). After this, she never re-introduces herself.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">11</span><span class="title">Demo the 4 core skills</span></div>
+  <div class="why">First "oh, this is different from Claude Chat" moments. Pick the ones most relevant to her current work.</div>
+  <div class="body">
+    <p>Have Bri type these one at a time. Each fires a skill. The first response of the session loads a wall of context (SOUL/CLAUDE/USER) — that's expected, it's how Claude knows the rules.</p>
+
+    <p><strong>Demo A — Inventory:</strong></p>
+    <div class="expect"><em>"What's in this repo?"</em> → <code>/whats-shipped</code> fires. Shows her toolkit.</div>
+
+    <p><strong>Demo B — Brand bible query:</strong></p>
+    <div class="expect"><em>"What does my brand bible say about voice?"</em> → <code>/brand-bible</code> reads <code>resources/brand/rallee/voice.yaml</code>. Returns refined / intelligent / warm + the "rally" verb usage rule + anti-LinkedIn-template-prose.</div>
+
+    <p><strong>Demo C — Design brief:</strong></p>
+    <div class="expect"><em>"Need a square LinkedIn post about a recent placement win — the brief should hit my brand."</em> → <code>/design-brief</code> returns structured copy + hex codes (#ea0000 red, #fffcf9 white) + font specs (Futura H1, Inter Display body) + layout suggestion. She can paste straight into Canva.</div>
+
+    <p><strong>Demo D — Critique:</strong></p>
+    <div class="expect">Ask her for a recent LinkedIn DM she sent. Paste it into chat with <em>"critique this"</em>. → <code>/critique</code> returns a 1-20 score, Ship/Fix/Kill verdict, specific edits. Watch her face when it's harsh.</div>
+
+    <p>Optional 5th if time:</p>
+    <div class="expect"><em>"Find any notes I've written about the AU recruitment market"</em> → <code>/vault-search</code> finds the seed file we shipped (AU recruitment market 2026 Q1 notes). Demonstrates "Claude remembers what I've written."</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">12</span><span class="title">Close the session cleanly (set the daily ritual)</span></div>
+  <div class="why">Shows her the compound-knowledge habit that makes tomorrow better than today.</div>
+  <div class="body">
+    <p>Have Bri type:</p>
+    <div class="expect"><em>"Session close — capture today's onboarding meeting."</em> → <code>/session-close</code> prompts her for decisions + lessons. She gives a 1-line summary. Claude writes to <code>memory/</code> and <code>MEMORY.md</code>.</div>
+    <p>Tomorrow Claude opens this folder and remembers: "Bri onboarded yesterday, set up Rallee Starter, ran first design brief on LinkedIn placement win."</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="head"><span class="num">13</span><span class="title">Walk her through the SOP page (the daily-use guide)</span></div>
+  <div class="why">She'll come back to this page tomorrow and the day after. It's her reference.</div>
+  <div class="body">
+    <p>Open in her browser: <strong><code>ferrisbueller92.github.io/rallee-starter/</code></strong></p>
+    <p>This is the daily-use SOP. Walk her through the main sections (~3 min):</p>
+    <ul>
+      <li>The 5 things she'll use most often</li>
+      <li>The rhythm (morning / during / end of day)</li>
+      <li>How to get updates (<code>/update</code> when you Telegram her)</li>
+      <li>Where to find what (skills, brand bible, lessons)</li>
+    </ul>
+    <p>Tell her: "Bookmark this URL. It's your home base."</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>If something breaks at any step</h2>
+  <p>Don't push through. Ping me with:</p>
+  <ul style="padding-left: 22px;">
+    <li>Step number you're on</li>
+    <li>Exact command you ran (copy from terminal)</li>
+    <li>Exact error message (or screenshot if it's in Claude Code)</li>
+  </ul>
+  <p>I patch in real-time, push to the repo, Bri pulls later. Each friction gets logged in BUILD-LOG.md so the next install runs cleaner.</p>
+</div>
+
+<div class="section">
+  <h2>After the meeting</h2>
+  <p>Send me a quick Telegram:</p>
+  <ul style="padding-left: 22px;">
+    <li>What worked smoothly</li>
+    <li>What felt clunky or confusing for her</li>
+    <li>Which demo prompt landed strongest</li>
+    <li>What she immediately asked to do next (signal for which skill to build deeper)</li>
+  </ul>
+  <p>That feedback shapes v0.2 of rallee-starter + informs the SJ workspace + becomes the concierge-install playbook for future paid customers.</p>
+</div>
+
+<div class="foot">
+  Internal runbook for Dave · Built by Just Sorted · Rallee Starter v0.1.1 · 2026-05-12 AEST
+</div>
+
+</div>
+</body>
+</html>
