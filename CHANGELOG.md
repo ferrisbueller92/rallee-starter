@@ -21,6 +21,23 @@ All notable changes to this repo are documented here. Each version is a semver t
 
 ---
 
+## [0.1.1] — 2026-05-12 — Cross-platform improvements
+
+### Improved (backported from sibling justsorted-workspace)
+- `session-state.sh` hook — replaced inline stat fallback with explicit `uname -s` OS detection (Darwin/Linux/MINGW*/MSYS*/CYGWIN*). Cleaner, more debuggable, works correctly on Git Bash on Windows in addition to Mac/Linux.
+- `deploy-safety.sh` hook — added Windows-specific destructive command blocks (Remove-Item -Recurse -Force, Format-Volume) + OS-aware soft-warnings on `rm` use (Mac suggests `trash`, Windows suggests PowerShell `Remove-Item`).
+- `BUILD-LOG.md` added — methodology artefact documenting v0.1.0 retroactively + recording v0.1.1 improvements.
+
+### Why these changes
+The sibling `justsorted-workspace` repo (SJ's environment, Windows-targeted) surfaced the cross-platform gaps in v0.1.0. Patches flow back to keep both repos in parity on infrastructure.
+
+### What's the same
+- All 9 skills unchanged
+- 1 tool unchanged
+- Rallee brand bible unchanged
+- Seed file unchanged
+- The "one-pager" simplicity preserved
+
 ## [Unreleased]
 
 _Track planned changes here. Each push to main becomes a versioned entry above._
