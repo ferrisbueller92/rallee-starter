@@ -1,0 +1,74 @@
+# Rallee — visual-style tokens
+# Read by /design-brief on every visual task
+
+layout_principles:
+  - "Editorial restraint. Magazine-grade margins."
+  - "Whitespace is the premium signal — not decoration."
+  - "Narrow text columns. Don't stretch body copy edge-to-edge."
+  - "One brand moment per surface — not three layered effects."
+  - "Hierarchy obvious in <1 second."
+
+red_usage:
+  rule: "Red is an accent only. Never background. Used sparingly — one moment per asset."
+  good_uses:
+    - "Wordmark accent (red period)"
+    - "Single CTA"
+    - "Photography accent (red shoes, red garment)"
+    - "Annotation moment (red cursive on yellow post-it — in evolution)"
+  bad_uses:
+    - "Red backgrounds"
+    - "Multiple red elements per surface"
+    - "Red as bulk colour"
+
+photography:
+  direction:
+    - "Editorial / lifestyle, not stock-corporate"
+    - "Red wardrobe pieces feature (red shoes, red garment, red suit)"
+    - "Eye contact with viewer common"
+    - "Premium fashion-magazine restraint"
+    - "Motion-blur and atmospheric shots allowed and encouraged"
+    - "Ocean / coastal Sydney mood references"
+  what_to_avoid:
+    - "Handshakes"
+    - "Headsets"
+    - "Whiteboards"
+    - "Stock recruiting imagery"
+    - "Generic office shots"
+    - "Forced smile / boardroom poses"
+
+dos_and_donts:
+  do:
+    - "Generous margins"
+    - "Black and white photography for hero moments"
+    - "Single red accent per surface"
+    - "Editorial type-over-photo when warranted"
+    - "Motion blur for energy"
+  dont:
+    - "Multiple visual effects layered"
+    - "All-caps headlines"
+    - "Stretching headlines edge-to-edge"
+    - "Red as background colour"
+    - "Decoration for decoration's sake"
+
+inspiration_references:
+  visual_feel_only:
+    - "Glossier — bold red mark + editorial restraint"
+    - "Ophie — warm cream backgrounds, intimate close-ups, asymmetric layout"
+    - "M Le Monde / Le Mexique editorial — type-over-photo, motion as feeling"
+  what_not_to_copy:
+    - "House of Chain — we don't want their look, just their high-end FEEL"
+    - "Squarespace-template recruitment sites — anti-pattern"
+
+evolution_in_flight:
+  warm_tones_proposal: |
+    v2 brand book may add warm complementary tones — sand/clay neutral, soft yellow
+    highlight (for post-it annotation moment), terracotta secondary. Goal: soften
+    the current black/white/red harshness. Red still does heavy lifting; new
+    tones are warming neutrals not competing accents.
+
+  annotation_moment: |
+    Bree liked a specific editorial moment: yellow post-it note overlaid on
+    background visual, with red cursive handwritten-style writing on the post-it.
+    Use as: hero pull-quote, founder signature, single call-out per page.
+    Premium and high-end, NOT crafty or cute.
+    Yellow: buttercream / soft mustard, not neon.

@@ -1,0 +1,114 @@
+# Rallee — voice tokens
+# Read by /humanise-text and /design-brief on every outbound writing task
+
+tone_descriptors:
+  - refined
+  - intelligent
+  - warm
+  - confident-without-bragging
+  - editorial
+  - direct-but-not-blunt
+
+register: |
+  Australian English without being colloquial. "Mate" / "G'day" / "no worries"
+  not used. Curated, professional, with quiet warmth.
+
+verb_signatures:
+  - rally  # use sparingly — max 1-2 times per asset
+  - vet
+  - curate
+  - place
+  - advocate
+  - introduce
+
+phrases_we_use:
+  - "We vet every candidate"
+  - "Suitable candidates receive dedicated time"
+  - "We advocate beyond the placement"
+  - "We rally the talent — and the team"
+
+phrases_we_avoid:
+  - "Rally your team" repeated (the verb is precious — over-use kills it)
+  - "Every candidate gets an hour" (too literal — use "dedicated time")
+  - "We're passionate about people" (every recruiter says this)
+  - "Synergy" / "win-win" / "drive results" / "leverage" / "best-in-class"
+  - "Hop on a quick call" / "circle back" / "touch base"
+  - LinkedIn-template openers: "I came across your profile" / "Hope you're well"
+  - "In today's competitive market" / "the war for talent"
+
+closing_signatures:
+  preferred:
+    - "Worth a chat?"
+    - "Want to meet them?"
+    - "Happy to introduce."
+    - "Let me know what works."
+  banned:
+    - "Looking forward to hearing from you"
+    - "Don't hesitate to reach out"
+    - "I hope this helps!"
+    - "Let me know if you have any questions"
+
+ai_isms_to_strip:
+  # Words/phrases that signal AI-generated copy — strip on every outbound
+  buzzwords:
+    - leverage
+    - impactful
+    - robust
+    - seamless
+    - synergy
+    - holistic
+    - scalable
+    - best-in-class
+    - world-class
+    - cutting-edge
+    - paradigm
+    - ecosystem
+    - journey (re: "candidate journey")
+    - comprehensive
+    - tapestry
+    - multifaceted
+  ai_phrases:
+    - "delve into"
+    - "dive into"
+    - "embark on"
+    - "navigate the landscape"
+    - "in today's fast-paced"
+    - "in the realm of"
+    - "it's important to note that"
+    - "comprehensive overview"
+    - "multifaceted approach"
+    - "tapestry of"
+  structural_tells:
+    - "3-bullet symmetrical lists when 2 or 4 would be honest"
+    - "Em-dash overuse (>1 per paragraph)"
+    - "Furthermore / Moreover / Additionally chained as transitions"
+    - "Not just X, but Y pattern repeated"
+
+reading_level: |
+  Target: professional-readable. Senior candidates, hiring managers, founders.
+  Not: dumbed-down. Not: jargon-laden. Crisp specificity over abstract claims.
+
+sentence_rhythm: |
+  Mix short and long. Don't write all medium-length sentences. End strong.
+  When in doubt, cut.
+
+context_modes:
+  candidate_outreach:
+    description: "Cold or warm DM to a potential candidate"
+    voice: "Direct, respectful of their time, specific about what's interesting about this role for them. Never templated."
+    length: "Short — 4-6 sentences max"
+
+  client_outreach:
+    description: "BD to a hiring company"
+    voice: "Demonstrate Rallee's edge in one specific way. Reference a relevant placement or insight if possible."
+    length: "Short — 5-8 sentences"
+
+  newsletter:
+    description: "Hot-talent newsletter to client base"
+    voice: "Editorial. Lead with a story, surface the talent, soft CTA."
+    length: "300-600 words"
+
+  social:
+    description: "LinkedIn / Instagram post"
+    voice: "Editorial restraint. Lead with a sharp observation. No motivational platitudes."
+    length: "Platform-appropriate"

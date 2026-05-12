@@ -1,0 +1,10 @@
+/* Figma extracted design tokens */
+:root {
+  --color-rallee-rallee-white: #fffcf9; /* Rallee/Rallee White */
+  --color-rallee-rallee-black: #070707; /* Rallee/Rallee Black */
+  --color-rallee-rallee-red: #ea0000; /* Rallee/Rallee Red */
+  --color-rallee-rallee-grey: #dddddd; /* Rallee/Rallee Grey */
+  --color-rallee-rallee-light-grey: #f6f2f2; /* Rallee/Rallee Light Grey */
+}
+
+/* Typography (named text styles) */

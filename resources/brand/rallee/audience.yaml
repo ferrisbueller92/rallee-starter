@@ -1,0 +1,80 @@
+# Rallee — audience tokens (ICPs)
+# Read by /design-brief and /research-analyst for targeting/messaging decisions
+
+primary_audiences:
+
+  clients:
+    description: "Companies hiring through Rallee"
+    profile: |
+      Australian SMBs and scale-ups. Premium-positioned in their own categories.
+      Team-culture-conscious. Have been burned by commodity recruiters delivering
+      bad-fit candidates.
+    decision_makers: ["Founder / CEO", "Head of People", "Hiring Manager (senior+)"]
+    pain_points:
+      - "Commodity recruiters send 20 CVs, 18 are wrong-fit"
+      - "Their existing TA team can't reach passive senior talent"
+      - "Cultural misfits cost 6 months of damage before they leave"
+      - "Hiring during scale-up windows is a constraint on growth"
+    what_they_value:
+      - "Vetting depth — Rallee genuinely meets candidates"
+      - "Cultural fit assessment, not just skills match"
+      - "Founder-level accountability on the placement"
+      - "Time spent understanding their business"
+    what_they_pay_for:
+      - "Curation, not volume"
+      - "Cultural fit + skills match"
+      - "Advocacy beyond placement"
+      - "Discretion (passive candidates, confidential roles)"
+    typical_brief_size: "1-3 senior roles per engagement"
+    typical_industry:
+      - "Tech / SaaS"
+      - "Professional services"
+      - "Creative agencies"
+      - "Premium consumer brands"
+
+  candidates:
+    description: "Talent Rallee places"
+    profile: |
+      Mid-to-senior career professionals. Ambitious. Want a curator who understands
+      them — not a recruiter spamming roles. Currently in a job, considering moves.
+    seniority: "Mid-level through executive (5+ years experience)"
+    pain_points:
+      - "Recruiters waste their time with bad-fit roles"
+      - "No one explains the cultural reality of the company"
+      - "LinkedIn DMs are templated and generic"
+      - "No advocacy if they don't get the role this time"
+    what_they_value:
+      - "Genuine time + listening"
+      - "Honest cultural readouts on companies"
+      - "Career coaching beyond the immediate role"
+      - "Long-term relationship — Rallee remembers them"
+    what_they_pay_for:
+      - "Nothing (recruiter fees come from the client)"
+      - "But they invest their attention — and that's the scarce resource"
+    typical_industries: "Tech, professional services, creative, premium consumer"
+
+secondary_audiences:
+
+  community:
+    description: "People who follow Rallee on LinkedIn / Instagram but aren't yet active client or candidate"
+    profile: "Australian professionals interested in good recruiting and team culture content"
+    what_they_value:
+      - "Editorial commentary on the market"
+      - "Hot talent newsletter"
+      - "Resources (CV templates, masterclasses)"
+
+  referrers:
+    description: "People who introduce Rallee to clients or candidates"
+    profile: "Founders, advisors, other agencies, past candidates"
+
+ICP_priority: |
+  Bree's single-ICP focus is on the CLIENT side primarily — that's where revenue
+  comes from. Candidates are essential but acquisition is mostly via reputation
+  and the talent pool form. Marketing and content largely target clients +
+  community.
+
+what_NOT_to_target:
+  - "Volume hiring / mass recruitment"
+  - "Junior / entry-level roles"
+  - "Companies looking for cheap and fast"
+  - "Anyone who needs 50 CVs in 5 days"

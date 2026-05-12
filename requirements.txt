@@ -1,0 +1,13 @@
+# Minimal Python deps for the Rallee Starter
+# Install: pip install -r requirements.txt
+
+# Vault search — embeddings-based semantic search
+# Falls back to ripgrep if these aren't installed
+sentence-transformers>=2.7.0
+numpy>=1.26.0
+
+# YAML reading for brand bible tokens
+PyYAML>=6.0
+
+# Markdown parsing (for /update changelog walk)
+markdown>=3.5

@@ -1,0 +1,83 @@
+# Rallee — typography tokens (v1 locked — v2 evolution in flight)
+# Read by /design-brief on every design task
+
+fonts:
+  display:
+    family: Futura
+    fallback: ["Futura PT", "Jost", "sans-serif"]
+    license_note: "Futura is licensed — Bree may have .otf/.ttf. Adobe Fonts: Futura PT. Open: Jost via Google Fonts."
+    usage: "H1 only"
+
+  body:
+    family: Inter Display
+    fallback: ["Inter", "system-ui", "sans-serif"]
+    license_note: "Free via Google Fonts."
+    usage: "H2–H4 and body copy"
+
+  script_accent:
+    status: "in evolution — not yet locked"
+    candidates: ["Caveat Brush", "Reenie Beanie", "GT Walsheim Hand", "Edwardian Script", "Bickham Script", "La Belle Aurore"]
+    usage: "Editorial flourishes only — post-it overlays, signature, single-word emphasis. NEVER body or extended copy."
+
+scale:
+  h1:
+    font: Futura
+    size: 56
+    line_height: 64
+    weight: "regular"
+    tracking: 0
+    usage: "Page heroes. One per page max."
+
+  h2:
+    font: Inter Display
+    size: 40
+    line_height: 48
+    weight: "Regular"
+    tracking: -2
+    usage: "Section headers"
+
+  h3:
+    font: Inter Display
+    size: 36
+    line_height: 42
+    weight: "Medium"
+    tracking: -2
+    usage: "Subsections"
+
+  h4:
+    font: Inter Display
+    size: 28
+    line_height: 36
+    weight: "Semi Bold"
+    tracking: -1
+    usage: "Card titles, callouts"
+
+  subheadline:
+    font: Inter Display
+    size: 18
+    line_height: 24
+    weight: "Regular"
+    tracking: -1
+    usage: "Body-adjacent subheading"
+
+  body:
+    font: Inter Display
+    size: 16
+    line_height: 26
+    weight: "Regular"
+    tracking: 0
+    usage: "Standard body copy"
+
+casing_rules:
+  - "No ALL CAPS on h1-h5. Use sentence case. (Confirmed brand rule.)"
+  - "Headlines: sentence case, not Title Case"
+  - "Brand wordmark stays as-set (lowercase)"
+
+evolution_in_flight:
+  notes: |
+    Bree found Futura + Inter Display "boring and harsh". v2 may swap display
+    face for something warmer/more editorial (Söhne Breit, Recoleta, GT Sectra,
+    Tiempos Headline candidates). Body face may swap from Inter Display.
+    Cursive script accent face being added.
+
+    Until v2 ships, v1 tokens above remain locked.

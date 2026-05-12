@@ -1,0 +1,125 @@
+{
+  "version": "0.1.0",
+  "description": "Trigger-phrase routing rules. The skill-router pattern-matches user prompts and suggests matching skill(s) before Claude responds. Order matters — first match wins unless explicit chaining.",
+  "rules": [
+    {
+      "skill": "research-analyst",
+      "triggers": [
+        "research this",
+        "research the",
+        "deep dive",
+        "analyse this",
+        "analyze this",
+        "what's the landscape",
+        "competitive intel",
+        "what do we know about"
+      ]
+    },
+    {
+      "skill": "design-brief",
+      "triggers": [
+        "design brief",
+        "canva brief",
+        "post about",
+        "carousel about",
+        "linkedin post",
+        "instagram post",
+        "need a design",
+        "social post"
+      ]
+    },
+    {
+      "skill": "brand-bible",
+      "triggers": [
+        "brand bible",
+        "brand tokens",
+        "what's our voice",
+        "our palette",
+        "our colours",
+        "our typography",
+        "brand guidelines"
+      ]
+    },
+    {
+      "skill": "humanise-text",
+      "triggers": [
+        "humanise",
+        "humanize",
+        "polish this",
+        "strip ai tone",
+        "make this sound natural",
+        "fix the voice"
+      ]
+    },
+    {
+      "skill": "critique",
+      "triggers": [
+        "critique",
+        "review this",
+        "roast this",
+        "what's wrong with this",
+        "give me harsh feedback",
+        "tear this apart"
+      ]
+    },
+    {
+      "skill": "vault-search",
+      "triggers": [
+        "find anything I've written about",
+        "have we covered",
+        "what did we write about",
+        "semantic search",
+        "search my vault",
+        "find my notes on"
+      ]
+    },
+    {
+      "skill": "session-close",
+      "triggers": [
+        "session close",
+        "wrap up",
+        "capture today",
+        "end session",
+        "save today's decisions"
+      ]
+    },
+    {
+      "skill": "whats-shipped",
+      "triggers": [
+        "what's in this repo",
+        "whats in this repo",
+        "what do I have",
+        "what's shipped",
+        "whats shipped",
+        "inventory",
+        "what skills do I have"
+      ]
+    },
+    {
+      "skill": "update",
+      "triggers": [
+        "any updates",
+        "pull latest",
+        "what's new",
+        "whats new",
+        "update from upstream",
+        "check for updates",
+        "git pull"
+      ]
+    }
+  ],
+  "chaining_rules": [
+    {
+      "rule": "humanise-on-outbound",
+      "description": "If the user asks Claude to write an outbound message (email, DM, social post, etc.), run humanise-text on the draft before returning."
+    },
+    {
+      "rule": "vault-search-first",
+      "description": "Before answering questions that reference past work ('have we written about', 'what did we decide'), search the vault first."
+    },
+    {
+      "rule": "brand-bible-on-design",
+      "description": "When design-brief fires, load brand-bible tokens first so the brief is on-brand by default."
+    }
+  ]
+}

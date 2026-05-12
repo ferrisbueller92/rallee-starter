@@ -1,0 +1,102 @@
+# Rallee Brand Bible asset manifest
+# ──────────────────────────────────────────────────────────────────────────
+# All images referenced from 05-brand-book-v3.html.
+# Verified by pre_write_asset_check.sh hook before any asset reference.
+#
+# Last verified: 2026-04-30
+# ──────────────────────────────────────────────────────────────────────────
+
+logo-wordmark-red.png:
+  content: "rallee. wordmark in red (Futura PT lowercase + red period). Canonical brand mark."
+  aspect_ratio: "wide horizontal"
+  used_in: ["bb-cover § hero wordmark", "bb-nav § brand"]
+
+logo-monogram-red.svg:
+  content: "Stylized R monogram in red (cursive script form). Canonical mark for square contexts."
+  aspect_ratio: "1:1"
+  used_in: ["bb-cover § monogram badge", "section 41 § lockup variants"]
+
+# ─── Photography (local copies of site-v4/assets/) ─────────────────────
+# Held in projects/rallee/brand/photos/ — gitignored to avoid duplication.
+# Source of truth: /Users/davidcalder/projects/rallee/site-v4/assets/manifest.yaml
+
+photos/bree-portrait-hero.jpg:
+  content: "B&W Bree smiling on couch, white shirt, plant in frame, sitting on rug"
+  aspect_ratio: "5:4"
+  used_in: ["section 19 § portraits — B&W editorial"]
+photos/bree-redsuit-standing.jpg:
+  content: "Color Bree in red suit standing, smiling, hand in pocket, white background"
+  aspect_ratio: "2:3"
+  used_in: ["section 19 § portraits — vertical 4:5", "section 34 § photography — founder lifestyle"]
+photos/bree-shoot-1.jpg:
+  content: "Color Bree in red suit standing, smiling, hand in pocket, white background"
+  aspect_ratio: "2:3"
+  used_in: ["section 35 § photo dos and donts — red wardrobe accent DO"]
+photos/photo-mood-chillis.jpg:
+  content: "Two red chillis crossed with gold ring, white background"
+  aspect_ratio: "1:1"
+  used_in: ["section 19 § portraits — square crop"]
+photos/photo-talent-surfers.jpg:
+  content: "Red and teal blurred surfers in motion blur, ocean"
+  aspect_ratio: "3:4"
+  used_in: ["section 19 § portraits — cinematic hero", "section 34 § photography — movement", "section 35 § dos and donts — motion blur DO"]
+photos/photo-crowd-overhead.png:
+  content: "B&W overhead view of crowd of people standing/walking"
+  aspect_ratio: "4:5"
+  used_in: ["section 35 § photo dos and donts — B&W warm DO + cool DON'T variants"]
+photos/photo-motion-gallery.png:
+  content: "B&W motion-blur scene of figures walking through gallery space"
+  aspect_ratio: "4:5"
+  used_in: ["section 34 § photography — primary editorial direction"]
+photos/photo-shadow-figures.png:
+  content: "B&W minimal scene with man walking past tall sand-coloured wall, distant figures"
+  aspect_ratio: "4:5"
+  used_in: ["section 34 § photography — reflective mood"]
+photos/photo-silhouettes-vertical.png:
+  content: "B&W silhouettes of multiple people standing, top-down composition"
+  aspect_ratio: "4:5"
+  used_in: ["section 35 § photo dos and donts — silhouettes DO"]
+
+# ─── Mood Board (ch6-4) — Brianna's inspo refs from 3 May 2026 email ──
+# Source: projects/rallee/review-2026-05-03/attachments/
+
+photos/moodboard/ref-glossier-grid.png:
+  content: "Glossier brand IG grid — bold red 'Glossier.' wordmark + 'You Look Good' editorial type + cherries/strawberries fruit-as-art on white. Reference for: bold red mark + fruit-as-art treatment."
+  aspect_ratio: "3:4"
+  used_in: ["section ch6-4 § mood board — bold red mark"]
+photos/moodboard/ref-ophie-grid.png:
+  content: "Ophie brand IG grid — warm cream backgrounds, intimate close-ups (lips, hands), product details, asymmetric layout, all-lowercase wordmark. Primary aesthetic reference per Brianna's brief."
+  aspect_ratio: "3:4"
+  used_in: ["section ch6-4 § mood board — primary aesthetic reference"]
+photos/moodboard/ref-invitation-flow.png:
+  content: "Editorial poster 'Invitation / The Beauty of Flow' — motion-blur woman in flowing yellow dress on cream, serif italic display overlaid. Reference for: editorial type-over-photo, motion as feeling."
+  aspect_ratio: "3:4"
+  used_in: ["section ch6-4 § mood board — editorial motion"]
+photos/moodboard/ref-our-services.png:
+  content: "Cream-toned agency design ref — pointy-toe boots/legs photo with 'OUR SERVICES' display type overlay, sidebar list of disciplines in tracked-out tiny type. Reference for: cream-on-cream sophistication + considered hierarchy."
+  aspect_ratio: "3:4"
+  used_in: ["section ch6-4 § mood board — type hierarchy"]
+photos/moodboard/ref-because-growth.png:
+  content: "Bold red display all-caps 'BECAUSE GROWTH STARTS WHEN SOMEONE FEELS YOUR BRAND BELONGS' overlaid on blurred coffee photo. Reference for: red statement-as-art, headline as heavy-lifting visual."
+  aspect_ratio: "4:3"
+  used_in: ["section ch6-4 § mood board — red statement-as-art"]
+photos/moodboard/pin-striped-umbrellas.jpg:
+  content: "Red and white striped beach umbrellas + palm trees + clear blue sky. Pinterest. Reference for: heritage red+white rhythm + Sydney summer mood + atmosphere."
+  aspect_ratio: "3:4"
+  used_in: ["section ch6-4 § mood board — red+white heritage"]
+photos/moodboard/pin-motion-red.jpg:
+  content: "Abstract motion-blur red/orange smear on pale background. Pinterest. Reference for: kinetic warmth, red as energy, brand mark in movement."
+  aspect_ratio: "3:4"
+  used_in: ["section ch6-4 § mood board — red in motion"]
+photos/moodboard/pin-surfers-red-blur.webp:
+  content: "Sydney surfers on teal water, red blurred foreground (likely flowers/bougainvillea). Pinterest. Reference for: place + brand mark integrated, Sydney coast as home base."
+  aspect_ratio: "3:4"
+  used_in: ["section ch6-4 § mood board — Sydney + red signature"]
+photos/moodboard/pin-chillis-gold-ring.webp:
+  content: "Two red chillis crossed and bound with a crumpled gold ring on white. Pinterest. Reference for: red object as gallery moment on warm white, considered still-life."
+  aspect_ratio: "3:4"
+  used_in: ["section ch6-4 § mood board — red object as art"]
+photos/moodboard/pin-burgundy-porsche.jpg:
+  content: "Vintage burgundy Porsche front-end on grey asphalt. Pinterest (M Le Monde / Le Mexique editorial). Reference for: deep red as luxury heritage statement, where #5C1010 plays."
+  aspect_ratio: "3:4"
+  used_in: ["section ch6-4 § mood board — deep red heritage"]
