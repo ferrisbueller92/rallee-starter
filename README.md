@@ -79,7 +79,7 @@ We push improvements weekly. You run `/update`, Claude explains what changed.
 
 ## When something breaks
 
-Telegram Dave. He's on call for the first 30 days.
+Text Dave. He's on call for the first 30 days.
 
 ---
 
